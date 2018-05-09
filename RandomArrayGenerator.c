@@ -27,10 +27,23 @@
 int main(int argc, char **argv)
 {
 
+	if(argv[1] == NULL)
+	{
+		printf("Please Specify a File Size!!!\n");
+		exit(-1);
+	}		
+	
+	if(argv[2] == NULL )
+	{
+		printf("Please specify a File Name!!!\n");
+		exit(-1);
+	}	
+
 	// Read Size of Array and File Name
 	int n = atoi(argv[1]);
 	int *original_array = malloc(n * sizeof(int));
 	
+
 	int c;
 	srand(time(NULL));
 
